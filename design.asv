@@ -14,9 +14,9 @@ pcb.Layers{1}=b;
 show(pcb)
 pcb.ViaLocations = [-0.025 0 1 3];
 pcb.ViaDiameter = 0.001;
-s = Sparameters(p,freq,Z0);
+s = sparameters(p,freq,Z0);
 w = PCBServices.MayhewWriter;
 w.Filename = 'Microstrip-fed-antenna';
 c= PCBConnectors.SMAEdge_Samtec;
-AM = PCBWriter(p,w,c);
-gerberWrite(AM)
+AM = PCBWriter(p, w, c);
+gerberWrite(AM);
